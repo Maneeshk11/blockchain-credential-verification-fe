@@ -1,60 +1,32 @@
-import Header from '@/components/header/header';
-import React, { useEffect } from 'react'; // Import React to use JSX syntax
-import { useState } from 'react';
+import Navbar from '@/components/navbar/navbar';
+import React from 'react';
+import LoginEntry from '@/components/login/LoginEntry'
 
-function randomColor() {
-    const colors = ['bg-[#FB9999]', 'bg-[#D9D9D9]', 'bg-[#D2C54C]', 'bg-[#D9D9D9]', 'bg-[#49BECE]', 'bg-[#D9D9D9]'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-}
-  
-export default function HomePage() {
-	const names = ['Simple', 'Aural', 'Effective'];
-	var [gheecolor, setGheecolor] = useState(randomColor());
-	useEffect(() => {
-		const newColor = randomColor();
-		setGheecolor(newColor);
-	  }, []);
-
-  return (
-    <div className="flex flex-col items-center">
-      <div>
-      <Header titlebro='' />
-      </div>
-      <div className="flex flex-row justify-between w-full">
-        <div className="flex flex-col">
-          <div className="relative w-64">
-            <input
-              type="text"
-              className={`w-full px-4 py-2 rounded-md ${randomColor()} text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50`}
-              placeholder="To do:"
-            />
+const CreateAccountForm = () => {
+	return (
+    <>
+    <div className="min-h-screen bg-gray-100 flex flex-col gap-36">
+        <Navbar />
+        <div className="bg-gray p-8 rounded-xl shadow-md mx-auto max-w-lg flex flex-col gap-8 items-center justify-center">
+          <div className='flex flex-col items-center gap-3'>
+		        <h1 className="text-2xl font-bold text-[#0D171C]">Create a free account</h1>
+            <LoginEntry heading="Email" placeholder="you@example.com" />
+            <LoginEntry heading="Password" placeholder="At least 8 characters" />
+            <LoginEntry heading="Re-enter password" placeholder="Confirm your password" />
+            <button className="w-96 bg-[#1A85C7] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
+            Create account
+            </button>
           </div>
-          <div className="relative w-64 mt-4">
-            <input
-              type="text"
-              className={`w-full px-4 py-2 rounded-md ${randomColor()} text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50`}
-              placeholder="To do:"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <div className="relative w-64">
-            <input
-              type="text"
-              className={`w-full px-4 py-2 rounded-md ${randomColor()} text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50`}
-              placeholder="Done:"
-            />
-          </div>
-          <div className="relative w-64 mt-4">
-            <input
-              type="text"
-              className={`w-full px-4 py-2 rounded-md ${randomColor()} text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50`}
-              placeholder="Done:"
-            />
-          </div>
-        </div>
+        <p className="text-[#4F7A96]">
+          By clicking 'Create account', you agree to our Terms of Service and
+          Privacy Policy. You may receive email from us and can opt out at any
+          time.
+        </p>
       </div>
     </div>
+
+	</>
   );
-}
+};
+
+export default CreateAccountForm;
