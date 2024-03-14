@@ -12,7 +12,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-9 py-3 rounded-xl text-sm font-medium font-semibold">
+            <button className="font text-white bg-gradient-to-r from-lowpurple to-highpurple hover:bg-[#C8BCD1] text-gray-800 px-9 py-3 rounded-full text-base font-medium font-semibold">
               Sign in
             </button>
           </div>
