@@ -4,14 +4,12 @@ interface LoginEntryProps {
   placeholder: string;
 }
 
-
-
 const LoginEntry = ({ heading, placeholder }: LoginEntryProps) => {
 
     return (
       <div>
-          <label htmlFor={heading} className="block font-medium mb-2 text-[#0D171C]">
-            <strong>{heading}</strong>
+          <label htmlFor={heading} className="block mb-2 text-[#0D171C] font-bold">
+            {heading}*
           </label>
         <input
           // type={heading}
