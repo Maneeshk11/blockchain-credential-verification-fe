@@ -14,12 +14,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "lowpurple": '#8CACFF',
-        "highpurple": '#7D5DFF',
-        "greyshade": "#C8BCD1"
-      }
+        "lowpurple": "#8CACFF",
+        "highpurple": "#7D5DFF",
+        "greyshade": "#C8BCD1",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

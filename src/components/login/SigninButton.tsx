@@ -1,30 +1,17 @@
-
-import Image from 'next/image';
-
 interface SigninButtonProps {
-	imagePath: string;
 	text: string;
+	startColor?: string;
+	endColor?: string;
 }
   
-const SigninButton = ({ imagePath, text }: SigninButtonProps) => {
-	if (imagePath != "") {
-	  return (
-		<div className="flex flex-row justify-center">
-		  <button className="w-96 border border-gray-300 rounded-full px-3 py-3 text-[#333333] font-bold">
-			{text}
-		  </button>
-		</div>
-	  )
-	} else {
-	  return (
-		<div className="flex flex-row justify-center">
-		  <Image src={text} alt="image" width={22} height={10} />
-		  <button className="w-96 border border-gray-300 rounded-full px-3 py-3 text-[#333333] font-bold">
-			{text}
-		  </button>
-		</div>
-	  )
-	}
+const SigninButton = ({ text, startColor="lowpurple", endColor="highpurple" }: SigninButtonProps) => {
+	const fromColor = "from-" + startColor;
+	const toColor = "to-" + endColor;
+	return (
+		<button className={`font text-white bg-gradient-to-r ${fromColor} ${toColor} hover:bg-[#C8BCD1] text-gray-800 px-9 py-3 rounded-full text-base font-medium font-semibold`}>
+		{text}
+	  </button>
+	)
 }
   
 export default SigninButton;

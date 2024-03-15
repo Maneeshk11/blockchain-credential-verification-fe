@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import SigninButton from '../login/SigninButton';
 
 const Navbar = () => {
   return (
@@ -11,10 +12,10 @@ const Navbar = () => {
               VeriDocs
             </Link>
           </div>
-          <div>
-            <button className="font text-white bg-gradient-to-r from-lowpurple to-highpurple hover:bg-[#C8BCD1] text-gray-800 px-9 py-3 rounded-full text-base font-medium font-semibold">
-              Sign in
-            </button>
+          <div className='flex flex-row items-center justify-center gap-3'>
+            <SigninButton text="Docs" startColor='gray-500' endColor='highpurple'/>
+            <SigninButton text="Sign in" />
+            <SigninButton text="Get Started" startColor='lowpurple' endColor='gray-500' />
           </div>
         </div>
       </div>

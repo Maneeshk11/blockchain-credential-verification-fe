@@ -16,7 +16,7 @@ const LoginEntry = ({ heading, placeholder }: LoginEntryProps) => {
           type={(heading.toLowerCase() == "email") ? "email" : "password"}
             id={heading}
             placeholder={placeholder}
-            className="w-96 border border-gray-300 rounded-full px-3 py-3 text-[#333333]"
+            className="w-full border border-gray-300 rounded-full px-3 py-3 text-[#333333]"
           />
       </div>
       
