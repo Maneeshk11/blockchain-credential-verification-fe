@@ -24,6 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: 'Poppins', sans-serif;
+
 }
 
 @layer utilities {
@@ -31,3 +33,49 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+	font-family: 'Poppins';
+	font-weight: 300;
+	src: url('/fonts/Poppins/Poppins-Light.truetype') format('truetype');
+  }
+  
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+/* Poppins Bold */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+  
+@font-face {
+font-family: 'Poppins';
+font-weight: 500;
+src: url('/fonts/Poppins/Poppins-Medium.truetype') format('truetype')
+}
+
+@font-face {
+font-family: 'Poppins';
+font-weight: 600;
+src: url('/fonts/Poppins/Poppins-SemiBold.truetype') format('truetype');
+}
+
+
+@font-face {
+font-family: 'Poppins';
+font-weight: 800;
+src: url('/fonts/Poppins/Poppins-ExtraBold.truetype') format('truetype');
+}
+
+
+
